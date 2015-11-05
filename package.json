@@ -1,0 +1,49 @@
+{
+  "name": "dcis",
+  "version": "0.0.1",
+  "description": "run domcom in the server side for isomorphic javascript",
+  "keywords": [
+    "domcom",
+    "web",
+    "component",
+    "javascript",
+    "reactive",
+    "isomorphic"
+  ],
+  "author": "Caoxingming",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/taijiweb/dcis/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "homepage": "https://github.com/taijiweb/dcis",
+  "bugs": "https://github.com/taijiweb/dcis/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taijiweb/dcis.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "1.8.0",
+    "mocha": "1.14.0",
+    "chai": "~1.9.1",
+    "minimist": "1.1.0",
+    "gulp": "~3.8.10",
+    "gulp-util": "~3.0.1",
+    "gulp-changed": "~1.0.0",
+    "gulp-cached": "~1.0.1",
+    "gulp-plumber": "~0.6.5",
+    "gulp-rename": "~1.2.0",
+    "gulp-coffee": "~2.2.0",
+    "gulp-mocha": "~1.1.0",
+    "gulp-copy": "0.0.2",
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "dev": "gulp"
+  }
+}
