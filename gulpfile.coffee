@@ -13,6 +13,8 @@ plumber = require('gulp-plumber')
 
 del = require('del')
 
+shell = require('shelljs')
+
 mocha = require('gulp-mocha')
 
 xtask = ->
@@ -47,8 +49,17 @@ task 'coffee', (cb) ->
 
 onErrorContinue = (err) -> console.log(err.stack); @emit 'end'
 
+task 'run-express', ->
+  if shell.exec("node demo-build/express/index.js").code != 0
+    shell.echo 'Error: Git commit failed'
+    shell.exit 1
+
 task 'mocha', ->
   src('test-build/**/test*.js').pipe(mocha({reporter: 'spec'})).on("error", onErrorContinue)
 
 task 'dev', (callback) -> runSequence 'clean', 'mocha', callback
+
+
+task 'express', (callback) -> runSequence 'clean', 'coffee', 'run-express', callback
+
 task 'default', ['dev']
