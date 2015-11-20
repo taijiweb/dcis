@@ -5,6 +5,9 @@ xhr = (method, url, data, options) ->
 
   req.setRequestHeader 'Content-Type', options.contentType or 'application/x-www-form-urlencoded'
 
+  for key, value of options.headers || {}
+    req.setRequestHeader(key, value)
+
   req.onreadystatechange ->
     if req.readyState == 4 # DONE
       parseResponse =
