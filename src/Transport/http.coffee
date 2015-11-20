@@ -1,4 +1,7 @@
 Transport = require './transport'
 
 class HttpTransport extends Transport
-  constructor: (req, res) ->
+  constructor: (@server, @path, @req, @res) ->
+
+  publish: (component) ->
+    res.json(component.publishJson())

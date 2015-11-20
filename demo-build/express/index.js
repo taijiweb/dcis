@@ -8,12 +8,11 @@ app = express();
 
 div = (dc = require('dcis')).div;
 
-console.log('express/index: ' + JSON.stringify(dc));
-
 app.get('/', function(req, res) {
-  var comp;
+  var comp, transport;
   comp = div();
-  comp.publish(res);
+  transport = new HttpTransport(req, res);
+  comp.publish(transport);
   return res.send("hello world");
 });
 

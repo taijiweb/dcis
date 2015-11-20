@@ -10,9 +10,8 @@ app = express()
 
 app.get '/', (req, res) ->
   comp = div()
-  transport = new HttpTransport(req, res)
+  transport = new HttpTransport(app, '/', req, res)
   comp.publish(transport)
-  res.send("hello world")
 
 http.createServer(app).listen 8080, ->
   console.log 'Express server listening on port ' + 8080
