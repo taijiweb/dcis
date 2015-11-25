@@ -53,6 +53,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "test": "mocha test-build/test-*"
   }
 }
