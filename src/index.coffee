@@ -3,5 +3,5 @@
 #console.log 'dcis/index: dc:'+dc
 
 extend dc,
-  require './transport'
+  require('./transport')
 

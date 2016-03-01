@@ -11,9 +11,8 @@ div = (dc = require('dcis')).div;
 app.get('/', function(req, res) {
   var comp, transport;
   comp = div();
-  transport = new HttpTransport(req, res);
-  comp.publish(transport);
-  return res.send("hello world");
+  transport = new HttpTransport(app, '/', req, res);
+  return comp.publish(transport);
 });
 
 http.createServer(app).listen(8080, function() {

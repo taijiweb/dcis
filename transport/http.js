@@ -7,7 +7,16 @@ Transport = require('./transport');
 HttpTransport = (function(_super) {
   __extends(HttpTransport, _super);
 
-  function HttpTransport(req, res) {}
+  function HttpTransport(server, path, req, res) {
+    this.server = server;
+    this.path = path;
+    this.req = req;
+    this.res = res;
+  }
+
+  HttpTransport.prototype.publish = function(component) {
+    return res.json(component.publishJson());
+  };
 
   return HttpTransport;
 

@@ -17,7 +17,7 @@
       "url": "https://raw.github.com/taijiweb/dcis/master/LICENSE"
     }
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "homepage": "https://github.com/taijiweb/dcis",
   "bugs": "https://github.com/taijiweb/dcis/issues",
   "repository": {

@@ -1,6 +1,6 @@
 path = require('path')
 gulp = require('gulp')
-gutil = require 'gulp-util'
+gutil = require('gulp-util')
 
 minimist = require('minimist')
 argv = minimist(process.argv.slice(2))
@@ -39,7 +39,7 @@ logTime = (msg) ->
   t = new Date()
   console.log("[#{t.getHours()}:#{t.getMinutes()}:#{t.getSeconds()}]: "+msg)
 
-coffee = require 'gulp-coffee'
+coffee = require('gulp-coffee')
 
 task 'coffee', (cb) ->
   from(['./src/**/*.coffee'], {cache:'coffee'}).pipelog(coffee({bare: true})).pipe(dest('./lib'))

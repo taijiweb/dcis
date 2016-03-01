@@ -1,10 +1,10 @@
-http = require 'http'
+http = require('http')
 
 express = require('express')
 
 app = express()
 
-{div} = dc = require 'dcis'
+{div} = dc = require('dcis')
 
 #console.log 'express/index: '+JSON.stringify(dc)
 

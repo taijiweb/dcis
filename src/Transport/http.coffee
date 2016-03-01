@@ -1,4 +1,4 @@
-Transport = require './transport'
+Transport = require('./transport')
 
 class HttpTransport extends Transport
   constructor: (@server, @path, @req, @res) ->
