@@ -1,6 +1,6 @@
 {
   "name": "dcis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "run domcom in the server side for isomorphic javascript",
   "keywords": [
     "domcom",
