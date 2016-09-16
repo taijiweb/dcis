@@ -33,7 +33,7 @@ Tag::processAttrs = (attrs) ->
       for key, value of styles
         @setProp(key, value, style, 'Style')
 
-    else if key=='class' or key=='className'
+    else if key=='class' || key=='className'
       className.extend(value)
 
       # events and its handler
@@ -43,7 +43,7 @@ Tag::processAttrs = (attrs) ->
         @bindOne(key, value)
       else
         v0 = value[0]
-        if v0=='before' or v0=='after'
+        if v0=='before' || v0=='after'
           for v in value[1...]
             # value is an array of handlers
             @bindOne(key, v, v0=='before')

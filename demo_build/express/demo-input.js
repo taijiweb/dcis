@@ -3,7 +3,7 @@ var x;
 x = see(1);
 
 text({
-  onchange: function(event, component) {
+  onchange: function(event) {
     x(this.value);
     return x.push().then(function() {
       console.log(x);

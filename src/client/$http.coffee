@@ -6,13 +6,13 @@ $http = (url) ->
 
       req = new XMLHttpRequest
 
-      req.setRequestHeader 'Content-Type', options.contentType or 'application/x-www-form-urlencoded'
+      req.setRequestHeader 'Content-Type', options.contentType || 'application/x-www-form-urlencoded'
 
       for key, value of options.headers || {}
         req.setRequestHeader(key, value)
 
       req.onload = ->
-        if @status >= 200 and @status < 300
+        if @status >= 200 && @status < 300
           resolve @response
         else reject @statusText
         return

@@ -1,9 +1,9 @@
 xhr = (method, url, data, options) ->
   req = new XMLHttpRequest
 
-  req.open method, url or '', true
+  req.open method, url || '', true
 
-  req.setRequestHeader 'Content-Type', options.contentType or 'application/x-www-form-urlencoded'
+  req.setRequestHeader 'Content-Type', options.contentType || 'application/x-www-form-urlencoded'
 
   for key, value of options.headers || {}
     req.setRequestHeader(key, value)
@@ -14,11 +14,11 @@ xhr = (method, url, data, options) ->
         try result = JSON.parse(req.responseText)
         catch e then result = req.responseText
 
-      options.always and options.always result
+      options.always && options.always result
 
-      if req.status >= 200 and req.status < 300
-        return options.done and options.done result
-      else options.error and options.error result
+      if req.status >= 200 && req.status < 300
+        return options.done && options.done result
+      else options.error && options.error result
 
     return
 

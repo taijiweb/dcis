@@ -1,7 +1,8 @@
+{div} = dc
 div({
-  onclick:(event, component) ->
-    @className.addClass('a')
+  onclick:(event) ->
+    this.className.addClass('a')
     see(1)
-    see @className
-    component.update()
+    see(this.className)
+    comp.render()
 })

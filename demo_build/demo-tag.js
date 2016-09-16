@@ -1,8 +1,12 @@
+var div;
+
+div = dc.div;
+
 div({
-  onclick: function(event, component) {
+  onclick: function(event) {
     this.className.addClass('a');
     see(1);
     see(this.className);
-    return component.update();
+    return comp.render();
   }
 });

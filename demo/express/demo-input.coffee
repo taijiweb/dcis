@@ -1,6 +1,6 @@
 x = see 1
 
-text(onchange: (event, component) ->
+text(onchange: (event) ->
   x @value
   x.push()
     .then -> console.log(x); alert(x)
